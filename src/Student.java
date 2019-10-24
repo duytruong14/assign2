@@ -61,7 +61,7 @@ public class Student {
         String email=input.nextLine();
 
         boolean check5=p2.matcher(email).find();
-        while ((check5==false)||((!email.contains("edu"))&&(!email.contains("com"))&&(!email.contains("org")))){
+       while ((check5==false)||((!email.contains("edu"))&&(!email.contains("com"))&&(!email.contains("org")))||(!email.contains("."))){
             System.out.println("Wrong format, try again: ");
             email=input.nextLine();
             check5=p2.matcher(email).find();}
