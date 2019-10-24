@@ -12,6 +12,7 @@ public class Student {
     private static Pattern p1 = Pattern.compile("^[0-9]*$");//check for number only
     private static Pattern p2 = Pattern.compile("^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+$");//check for email
     private static Pattern p3 = Pattern.compile("^\\d+\\s[a-zA-Z]+(\\s[a-zA-Z-]*)?$");//check for address
+    private static Pattern p4 = Pattern.compile("^[a-zA-Z]+(?:[\\s-][a-zA-Z]+)*$");//check for city name
     private static Scanner input=new Scanner(System.in);
     private static int count;
 
@@ -81,11 +82,11 @@ public class Student {
 
         System.out.println("Enter city name: ");
         String city=input.nextLine();
-        boolean check=p.matcher(city).find();
+        boolean check=p4.matcher(city).find();
         while (check==false){
             System.out.println("City can only contain alphabet letter, try again: ");
             city=input.nextLine();
-            check=p.matcher(city).find();}
+            check=p4.matcher(city).find();}
 
         System.out.println("Enter state's initials (2 letter only): ");
         String states=input.nextLine().toUpperCase();
