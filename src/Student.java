@@ -10,7 +10,7 @@ public class Student {
     private String line1;private String City;private String State; private String zipcode;
     private static Pattern p = Pattern.compile("^[a-zA-Z]*$"); //check for alphabet only
     private static Pattern p1 = Pattern.compile("^[0-9]*$");//check for number only
-    private static Pattern p2 = Pattern.compile("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");//check for email
+    private static Pattern p2 = Pattern.compile("^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+$");//check for email
     private static Pattern p3 = Pattern.compile("^(?:[Pp][Oo]\\s[Bb][Oo][Xx]|[0-9]+)\\s(?:[0-9A-Za-z\\.'#]|[^\\S\\r\\n])+");//check for address
     private static Scanner input=new Scanner(System.in);
     private static int count;
